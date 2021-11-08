@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VideoListItem: View {
+struct VideoListItemView: View {
 
     let video: Video
     
@@ -42,7 +42,7 @@ struct VideoListItem: View {
 
 struct ViewListItem_Previews: PreviewProvider {
     static var previews: some View {
-        VideoListItem(video: (Bundle.main.decode("videos.json") as [Video])[0])
+        VideoListItemView(video: (Bundle.main.decode("videos.json") as [Video])[0])
             .previewLayout(.sizeThatFits)
             .padding()
     }
