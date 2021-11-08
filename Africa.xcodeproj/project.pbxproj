@@ -19,6 +19,7 @@
 		86D3CB3927390DDA009E65A3 /* VideoListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D3CB3827390DDA009E65A3 /* VideoListItemView.swift */; };
 		86D3CB3B273921CD009E65A3 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D3CB3A273921CD009E65A3 /* VideoPlayerView.swift */; };
 		86D3CB3E2739232E009E65A3 /* VideoPlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D3CB3D2739232E009E65A3 /* VideoPlayerHelper.swift */; };
+		86D3CB4027395480009E65A3 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D3CB3F27395480009E65A3 /* MapAnnotationView.swift */; };
 		86E6589C273547A500DF7145 /* rhino.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 86E65892273547A100DF7145 /* rhino.mp4 */; };
 		86E6589D273547A500DF7145 /* zebra.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 86E65893273547A200DF7145 /* zebra.mp4 */; };
 		86E6589E273547A500DF7145 /* hippo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 86E65894273547A200DF7145 /* hippo.mp4 */; };
@@ -61,6 +62,7 @@
 		86D3CB3827390DDA009E65A3 /* VideoListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListItemView.swift; sourceTree = "<group>"; };
 		86D3CB3A273921CD009E65A3 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		86D3CB3D2739232E009E65A3 /* VideoPlayerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerHelper.swift; sourceTree = "<group>"; };
+		86D3CB3F27395480009E65A3 /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
 		86E65892273547A100DF7145 /* rhino.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rhino.mp4; sourceTree = "<group>"; };
 		86E65893273547A200DF7145 /* zebra.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = zebra.mp4; sourceTree = "<group>"; };
 		86E65894273547A200DF7145 /* hippo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = hippo.mp4; sourceTree = "<group>"; };
@@ -183,10 +185,10 @@
 			children = (
 				861CF21C27352E9E00E92A20 /* AfricaApp.swift */,
 				861CF21E27352E9E00E92A20 /* ContentView.swift */,
-				86E658B22735508900DF7145 /* VideoListView.swift */,
-				86E658B42735509600DF7145 /* MapView.swift */,
 				86E658B6273550A800DF7145 /* GalleryView.swift */,
 				86E658B8273550D800DF7145 /* MainView.swift */,
+				86E658B42735509600DF7145 /* MapView.swift */,
+				86E658B22735508900DF7145 /* VideoListView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -194,14 +196,15 @@
 		86E658B127354FE300DF7145 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				86E658BB27356CAC00DF7145 /* CoverImageView.swift */,
-				86E658C52735743C00DF7145 /* AnimalListItemView.swift */,
 				86E658C927357A0B00DF7145 /* AnimalDetailView.swift */,
-				86E658CB27357E4A00DF7145 /* HeadingView.swift */,
-				86E658CD27357FFC00DF7145 /* InsetGalleryView.swift */,
-				86B710A22738417E000974C6 /* InsetFactView.swift */,
-				86B710A6273846AE000974C6 /* InsetMapView.swift */,
+				86E658C52735743C00DF7145 /* AnimalListItemView.swift */,
+				86E658BB27356CAC00DF7145 /* CoverImageView.swift */,
 				86B710A827384C54000974C6 /* ExternalWeblinkView.swift */,
+				86E658CB27357E4A00DF7145 /* HeadingView.swift */,
+				86B710A22738417E000974C6 /* InsetFactView.swift */,
+				86E658CD27357FFC00DF7145 /* InsetGalleryView.swift */,
+				86B710A6273846AE000974C6 /* InsetMapView.swift */,
+				86D3CB3F27395480009E65A3 /* MapAnnotationView.swift */,
 				86D3CB3827390DDA009E65A3 /* VideoListItemView.swift */,
 				86D3CB3A273921CD009E65A3 /* VideoPlayerView.swift */,
 			);
@@ -211,8 +214,8 @@
 		86E658BD27356E0600DF7145 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				86E658BE27356E1A00DF7145 /* CoverImage.swift */,
 				86E658C7273575BC00DF7145 /* Animal.swift */,
+				86E658BE27356E1A00DF7145 /* CoverImage.swift */,
 				86B710A427384612000974C6 /* NationalParkLocation.swift */,
 				86D3CB3627390D42009E65A3 /* Video.swift */,
 			);
@@ -324,6 +327,7 @@
 				86B710A927384C54000974C6 /* ExternalWeblinkView.swift in Sources */,
 				86E658B52735509600DF7145 /* MapView.swift in Sources */,
 				861CF21D27352E9E00E92A20 /* AfricaApp.swift in Sources */,
+				86D3CB4027395480009E65A3 /* MapAnnotationView.swift in Sources */,
 				86E658BF27356E1A00DF7145 /* CoverImage.swift in Sources */,
 				86E658B32735508900DF7145 /* VideoListView.swift in Sources */,
 				86E658B7273550A800DF7145 /* GalleryView.swift in Sources */,
