@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ViewListItem: View {
+struct VideoListItem: View {
 
-    let movie: Movie
+    let video: Video
     
     var body: some View {
         HStack(spacing: 10.0) {
             ZStack {
-                Image(movie.thumbnail)
+                Image(video.thumbnail)
                     .resizable()
                     .scaledToFit()
                     .frame(height: 80)
@@ -27,11 +27,11 @@ struct ViewListItem: View {
             }
 
             VStack(alignment: .leading, spacing: 10.0) {
-                Text(movie.name)
+                Text(video.name)
                     .font(.title2)
                     .fontWeight(.heavy)
                     .foregroundColor(.accentColor)
-                Text(movie.headline)
+                Text(video.headline)
                     .font(.footnote)
                     .multilineTextAlignment(.leading)
                     .lineLimit(2)
@@ -42,7 +42,7 @@ struct ViewListItem: View {
 
 struct ViewListItem_Previews: PreviewProvider {
     static var previews: some View {
-        ViewListItem(movie: (Bundle.main.decode("videos.json") as [Movie])[0])
+        VideoListItem(video: (Bundle.main.decode("videos.json") as [Video])[0])
             .previewLayout(.sizeThatFits)
             .padding()
     }
