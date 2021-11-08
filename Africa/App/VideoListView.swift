@@ -16,8 +16,12 @@ struct VideoListView: View {
     var body: some View {
         NavigationView {
             List(videos) { item in
-                VideoListItemView(video: item)
-                    .padding(.vertical, 8.0)
+                NavigationLink(destination: {
+                    VideoPlayerView(videoSelected: item.id, videoTitle: item.name)
+                }, label: {
+                    VideoListItemView(video: item)
+                        .padding(.vertical, 8.0)
+                })
             }
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("Videos", displayMode: .inline)
@@ -29,7 +33,6 @@ struct VideoListView: View {
                     } label: {
                         Image(systemName: "arrow.2.squarepath")
                     }
-
                 }
             }
         }
