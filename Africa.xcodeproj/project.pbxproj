@@ -207,9 +207,9 @@
 				86E658CD27357FFC00DF7145 /* InsetGalleryView.swift */,
 				86B710A6273846AE000974C6 /* InsetMapView.swift */,
 				86D3CB3F27395480009E65A3 /* MapAnnotationView.swift */,
+				86D3CB41273961AA009E65A3 /* MotionAnimationView.swift */,
 				86D3CB3827390DDA009E65A3 /* VideoListItemView.swift */,
 				86D3CB3A273921CD009E65A3 /* VideoPlayerView.swift */,
-				86D3CB41273961AA009E65A3 /* MotionAnimationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
