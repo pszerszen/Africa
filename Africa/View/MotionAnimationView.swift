@@ -20,7 +20,7 @@ struct MotionAnimationView: View {
                         .foregroundColor(/*@START_MENU_TOKEN@*/.gray/*@END_MENU_TOKEN@*/)
                         .opacity(0.15)
                         .frame(width: randomSize(), height: randomSize(), alignment: .center)
-                        .scaleEffect(isAnimating ? randomSize() : 1)
+                        .scaleEffect(isAnimating ? randomScale() : 1)
                         .position(x: randomCoordinate(max: geometry.size.width),
                                   y: randomCoordinate(max: geometry.size.height))
                         .animation(Animation.interpolatingSpring(stiffness: 0.5, damping: 0.5)
@@ -31,8 +31,6 @@ struct MotionAnimationView: View {
                             isAnimating = true
                         }
                 }
-
-                Text("Width: \(geometry.size.width) Height: \(geometry.size.height)")
             }
             .drawingGroup()
         }
@@ -47,7 +45,7 @@ struct MotionAnimationView: View {
     }
 
     private func randomScale() -> CGFloat {
-        return CGFloat(Double.random(in: 0.1...1.0))
+        return CGFloat(Double.random(in: 0.1...2.0))
     }
 
     private func randomSpeed() -> Double {
