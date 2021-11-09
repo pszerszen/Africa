@@ -9,7 +9,7 @@ import SwiftUI
 
 struct VideoListView: View {
 
-    @State var videos: [Video] = Bundle.main.decode("videos.json")
+    @State var videos: [Video] = DataHelper.main.videos
 
     let hapticImpact = UIImpactFeedbackGenerator(style: .medium)
 

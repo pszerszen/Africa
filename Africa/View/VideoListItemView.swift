@@ -42,7 +42,7 @@ struct VideoListItemView: View {
 
 struct ViewListItem_Previews: PreviewProvider {
     static var previews: some View {
-        VideoListItemView(video: (Bundle.main.decode("videos.json") as [Video])[0])
+        VideoListItemView(video: DataHelper.main.videos[0])
             .previewLayout(.sizeThatFits)
             .padding()
     }

@@ -38,7 +38,7 @@ struct MapAnnotationView: View {
 
 struct MapAnnotationView_Previews: PreviewProvider {
     static var previews: some View {
-        MapAnnotationView(location: (Bundle.main.decode("locations.json") as [NationalParkLocation])[0])
+        MapAnnotationView(location: DataHelper.main.locations[0])
             .previewLayout(.sizeThatFits)
             .padding()
     }

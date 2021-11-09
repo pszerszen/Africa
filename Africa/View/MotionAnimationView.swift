@@ -52,7 +52,7 @@ struct MotionAnimationView: View {
         return Double.random(in: 0.025...1.0)
     }
 
-    func randomDelay() -> Double {
+    private func randomDelay() -> Double {
         return Double.random(in: 0...2)
     }
 }

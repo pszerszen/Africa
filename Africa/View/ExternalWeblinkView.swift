@@ -32,7 +32,7 @@ struct ExternalWeblinkView: View {
 
 struct ExternalWeblinkView_Previews: PreviewProvider {
     static var previews: some View {
-        ExternalWeblinkView(animal: (Bundle.main.decode("animals.json") as [Animal])[0])
+        ExternalWeblinkView(animal: DataHelper.main.animals[0])
             .previewLayout(.sizeThatFits)
             .padding()
     }

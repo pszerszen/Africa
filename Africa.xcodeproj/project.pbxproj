@@ -11,6 +11,8 @@
 		861CF21F27352E9E00E92A20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861CF21E27352E9E00E92A20 /* ContentView.swift */; };
 		861CF22127352EA000E92A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 861CF22027352EA000E92A20 /* Assets.xcassets */; };
 		861CF22427352EA000E92A20 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 861CF22327352EA000E92A20 /* Preview Assets.xcassets */; };
+		869AF1A3273A6C5200E4C03C /* AnimalGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AF1A2273A6C5200E4C03C /* AnimalGridItemView.swift */; };
+		869AF1A5273A743400E4C03C /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869AF1A4273A743400E4C03C /* DataHelper.swift */; };
 		86B710A32738417F000974C6 /* InsetFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B710A22738417E000974C6 /* InsetFactView.swift */; };
 		86B710A527384612000974C6 /* NationalParkLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B710A427384612000974C6 /* NationalParkLocation.swift */; };
 		86B710A7273846AE000974C6 /* InsetMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B710A6273846AE000974C6 /* InsetMapView.swift */; };
@@ -55,6 +57,8 @@
 		861CF21E27352E9E00E92A20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		861CF22027352EA000E92A20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		861CF22327352EA000E92A20 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		869AF1A2273A6C5200E4C03C /* AnimalGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGridItemView.swift; sourceTree = "<group>"; };
+		869AF1A4273A743400E4C03C /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		86B710A22738417E000974C6 /* InsetFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetFactView.swift; sourceTree = "<group>"; };
 		86B710A427384612000974C6 /* NationalParkLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalParkLocation.swift; sourceTree = "<group>"; };
 		86B710A6273846AE000974C6 /* InsetMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetMapView.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				86D3CB3D2739232E009E65A3 /* VideoPlayerHelper.swift */,
+				869AF1A4273A743400E4C03C /* DataHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				86E658C927357A0B00DF7145 /* AnimalDetailView.swift */,
+				869AF1A2273A6C5200E4C03C /* AnimalGridItemView.swift */,
 				86E658C52735743C00DF7145 /* AnimalListItemView.swift */,
 				86E658BB27356CAC00DF7145 /* CoverImageView.swift */,
 				86B710A827384C54000974C6 /* ExternalWeblinkView.swift */,
@@ -335,11 +341,13 @@
 				86E658B32735508900DF7145 /* VideoListView.swift in Sources */,
 				86E658B7273550A800DF7145 /* GalleryView.swift in Sources */,
 				86E658CE27357FFC00DF7145 /* InsetGalleryView.swift in Sources */,
+				869AF1A3273A6C5200E4C03C /* AnimalGridItemView.swift in Sources */,
 				86B710A7273846AE000974C6 /* InsetMapView.swift in Sources */,
 				86E658C227356EF400DF7145 /* CodableBundleExtension.swift in Sources */,
 				86E658CC27357E4A00DF7145 /* HeadingView.swift in Sources */,
 				86D3CB42273961AA009E65A3 /* MotionAnimationView.swift in Sources */,
 				86D3CB3E2739232E009E65A3 /* VideoPlayerHelper.swift in Sources */,
+				869AF1A5273A743400E4C03C /* DataHelper.swift in Sources */,
 				86D3CB3B273921CD009E65A3 /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

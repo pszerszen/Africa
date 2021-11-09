@@ -9,14 +9,10 @@ import SwiftUI
 
 struct GalleryView: View {
 
+    private let animals = DataHelper.main.animals
+    private let haptics = UIImpactFeedbackGenerator(style: .medium)
+
     @State private var selectedAnimal = "lion"
-
-    private let animals: [Animal] = Bundle.main.decode("animals.json")
-    let haptics = UIImpactFeedbackGenerator(style: .medium)
-
-
-//    let gridLayout: [GridItem] = Array.init(repeating: GridItem(.flexible()), count: 3)
-
     @State private var gridLayout = [GridItem(.flexible())]
     @State private var gridColumn = 3.0
 

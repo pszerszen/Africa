@@ -17,7 +17,7 @@ struct MapView: View {
         return MKCoordinateRegion(center: mapCoordinates, span: mapZoomLevel)
     }()
 
-    let locations: [NationalParkLocation] = Bundle.main.decode("locations.json")
+    private let locations = DataHelper.main.locations
 
     var body: some View {
         // MARK: - Basic map

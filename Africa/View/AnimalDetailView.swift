@@ -84,7 +84,7 @@ struct AnimalDetailView: View {
 struct AnimalDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            AnimalDetailView(animal: (Bundle.main.decode("animals.json") as [Animal])[0])
+            AnimalDetailView(animal: DataHelper.main.animals[0])
         }
         .previewDevice("iPhone 12 Pro")
     }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    private let animals: [Animal] = Bundle.main.decode("animals.json")
+    private let animals = DataHelper.main.animals
     private let haptics = UIImpactFeedbackGenerator(style: .medium)
 
     @State private var isGridViewActive = false
