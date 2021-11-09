@@ -45,25 +45,15 @@ struct MapView: View {
                     .frame(width: 48, height: 48, alignment: .center)
                 VStack(alignment: .leading, spacing: 3.0) {
                     HStack {
-                        Text("Latitude:")
-                            .fontWeight(.bold)
-                            .font(.footnote)
-                            .foregroundColor(.accentColor)
+                        Text("Latitude:").coordinateTitle()
                         Spacer()
-                        Text("\(region.center.latitude)")
-                            .font(.footnote)
-                            .foregroundColor(Color.white)
+                        Text("\(region.center.latitude)").coordinateValue()
                     }
                     Divider()
                     HStack {
-                        Text("Longitute:")
-                            .fontWeight(.bold)
-                            .font(.footnote)
-                            .foregroundColor(.accentColor)
+                        Text("Longitute:").coordinateTitle()
                         Spacer()
-                        Text("\(region.center.longitude)")
-                            .font(.footnote)
-                            .foregroundColor(Color.white)
+                        Text("\(region.center.longitude)").coordinateValue()
                     }
                 }
             }
@@ -78,5 +68,21 @@ struct MapView: View {
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MapView()
+    }
+}
+
+fileprivate extension Text {
+
+    func coordinateTitle() -> some View {
+        return self
+            .fontWeight(.bold)
+            .font(.footnote)
+            .foregroundColor(.accentColor)
+    }
+
+    func coordinateValue() -> some View {
+        return self
+            .font(.footnote)
+            .foregroundColor(Color.white)
     }
 }

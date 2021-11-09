@@ -20,12 +20,7 @@ struct GalleryView: View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 Image(selectedAnimal)
-                    .resizable()
-                    .scaledToFit()
-                    .clipShape(Circle())
-                    .overlay {
-                        Circle().stroke(Color.white, lineWidth: 8)
-                    }
+                    .circleFrame(lineWidth: 8)
 
                 Slider(value: $gridColumn, in: 2...4, step: 1)
                     .padding(.horizontal)
@@ -36,13 +31,7 @@ struct GalleryView: View {
                 LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10) {
                     ForEach(animals) { item in
                         Image(item.image)
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(Circle())
-                            .overlay {
-                                Circle()
-                                    .stroke(Color.white, lineWidth: 1)
-                            }
+                            .circleFrame()
                             .onTapGesture {
                                 selectedAnimal = item.image
                                 haptics.impactOccurred()
@@ -69,5 +58,17 @@ struct GalleryView: View {
 struct GalleryView_Previews: PreviewProvider {
     static var previews: some View {
         GalleryView()
+    }
+}
+
+fileprivate extension Image {
+    func circleFrame(lineWidth: CGFloat = 1) -> some View {
+        return self
+            .resizable()
+            .scaledToFit()
+            .clipShape(Circle())
+            .overlay {
+                Circle().stroke(Color.white, lineWidth: lineWidth)
+            }
     }
 }
