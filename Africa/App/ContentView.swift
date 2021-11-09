@@ -11,13 +11,16 @@ struct ContentView: View {
 
     private let animals = DataHelper.main.animals
     private let haptics = UIImpactFeedbackGenerator(style: .medium)
-    private let gridLayout = Array.init(repeating: GridItem(.flexible()), count: 2)
+
+    @State private var gridLayout = Array.init(repeating: GridItem(.flexible()), count: 1)
+    @State private var gridColumn = 1
+    @State private var toolbarIcon = "rectangle.grid.1x2"
 
     @State private var isGridViewActive = false
 
     var body: some View {
         NavigationView {
-            
+
             Group {
                 if !isGridViewActive {
                     List {
@@ -62,16 +65,38 @@ struct ContentView: View {
                                 .foregroundColor(isGridViewActive ? .primary : .accentColor)
                         }
                         Button {
+                            if isGridViewActive {
+                                switchLayout()
+                            }
                             isGridViewActive = true
                             haptics.impactOccurred()
                         } label: {
-                            Image(systemName: "square.grid.2x2")
+                            Image(systemName: toolbarIcon)
                                 .font(.title2)
                                 .foregroundColor(isGridViewActive ? .accentColor : .primary)
                         }
                     }
                 }
             }
+        }
+    }
+
+    private func switchLayout() {
+        gridColumn += 1
+        if gridColumn > 3 {
+            gridColumn = 1
+        }
+        gridLayout = Array.init(repeating: .init(.flexible()), count: gridColumn)
+
+        switch gridColumn {
+            case 1:
+                toolbarIcon = "rectangle.grid.1x2"
+            case 2:
+                toolbarIcon = "square.grid.2x2"
+            case 3:
+                toolbarIcon = "square.grid.3x2"
+            default:
+                fatalError("Invalid gridColumnValue: \(gridColumn)")
         }
     }
 }
