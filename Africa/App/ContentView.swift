@@ -13,7 +13,6 @@ struct ContentView: View {
     private let haptics = UIImpactFeedbackGenerator(style: .medium)
 
     @State private var gridLayout = Array.init(repeating: GridItem(.flexible()), count: 1)
-    @State private var gridColumn = 1
     @State private var toolbarIcon = "square.grid.2x2"
 
     @State private var isGridViewActive = false
@@ -80,10 +79,9 @@ struct ContentView: View {
     }
 
     private func switchLayout() {
-        gridColumn = gridColumn % 3 + 1
-        gridLayout = Array.init(repeating: .init(.flexible()), count: gridColumn)
+        gridLayout = Array.init(repeating: .init(.flexible()), count: gridLayout.count % 3 + 1)
 
-        switch gridColumn {
+        switch gridLayout.count {
             case 1:
                 toolbarIcon = "square.grid.2x2"
             case 2:
@@ -91,7 +89,7 @@ struct ContentView: View {
             case 3:
                 toolbarIcon = "rectangle.grid.1x2"
             default:
-                fatalError("Invalid gridColumnValue: \(gridColumn)")
+                fatalError("Invalid gridLayout size: \(gridLayout.count)")
         }
     }
 }
