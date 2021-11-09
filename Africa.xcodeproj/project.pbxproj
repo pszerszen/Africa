@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		86071DEF273A955C00864878 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86071DEE273A955C00864878 /* Stickers.xcassets */; };
 		86071DF3273A955D00864878 /* Stickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 86071DEC273A955800864878 /* Stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		86071DF9273A97F800864878 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86071DF8273A97F800864878 /* CreditsView.swift */; };
+		86071DFC273A99AF00864878 /* CenterModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86071DFB273A99AF00864878 /* CenterModifier.swift */; };
 		861CF21D27352E9E00E92A20 /* AfricaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861CF21C27352E9E00E92A20 /* AfricaApp.swift */; };
 		861CF21F27352E9E00E92A20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861CF21E27352E9E00E92A20 /* ContentView.swift */; };
 		861CF22127352EA000E92A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 861CF22027352EA000E92A20 /* Assets.xcassets */; };
@@ -81,6 +83,8 @@
 		86071DEC273A955800864878 /* Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		86071DEE273A955C00864878 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		86071DF0273A955C00864878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86071DF8273A97F800864878 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		86071DFB273A99AF00864878 /* CenterModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterModifier.swift; sourceTree = "<group>"; };
 		861CF21927352E9E00E92A20 /* Africa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Africa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		861CF21C27352E9E00E92A20 /* AfricaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfricaApp.swift; sourceTree = "<group>"; };
 		861CF21E27352E9E00E92A20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -147,6 +151,14 @@
 			path = Stickers;
 			sourceTree = "<group>";
 		};
+		86071DFA273A999500864878 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				86071DFB273A99AF00864878 /* CenterModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
 		861CF21027352E9E00E92A20 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +187,7 @@
 				86E658C027356ED900DF7145 /* Extension */,
 				86D3CB3C27392311009E65A3 /* Helper */,
 				86E658BD27356E0600DF7145 /* Model */,
+				86071DFA273A999500864878 /* Modifier */,
 				861CF22227352EA000E92A20 /* Preview Content */,
 				86E658912735477700DF7145 /* Video */,
 				86E658B127354FE300DF7145 /* View */,
@@ -247,6 +260,7 @@
 				869AF1A2273A6C5200E4C03C /* AnimalGridItemView.swift */,
 				86E658C52735743C00DF7145 /* AnimalListItemView.swift */,
 				86E658BB27356CAC00DF7145 /* CoverImageView.swift */,
+				86071DF8273A97F800864878 /* CreditsView.swift */,
 				86B710A827384C54000974C6 /* ExternalWeblinkView.swift */,
 				86E658CB27357E4A00DF7145 /* HeadingView.swift */,
 				86B710A22738417E000974C6 /* InsetFactView.swift */,
@@ -395,10 +409,12 @@
 				86D3CB3727390D42009E65A3 /* Video.swift in Sources */,
 				86E658C8273575BC00DF7145 /* Animal.swift in Sources */,
 				861CF21F27352E9E00E92A20 /* ContentView.swift in Sources */,
+				86071DFC273A99AF00864878 /* CenterModifier.swift in Sources */,
 				86D3CB3927390DDA009E65A3 /* VideoListItemView.swift in Sources */,
 				86B710A527384612000974C6 /* NationalParkLocation.swift in Sources */,
 				86E658C62735743C00DF7145 /* AnimalListItemView.swift in Sources */,
 				86B710A32738417F000974C6 /* InsetFactView.swift in Sources */,
+				86071DF9273A97F800864878 /* CreditsView.swift in Sources */,
 				86E658B9273550D800DF7145 /* MainView.swift in Sources */,
 				86E658BC27356CAC00DF7145 /* CoverImageView.swift in Sources */,
 				86E658CA27357A0B00DF7145 /* AnimalDetailView.swift in Sources */,
