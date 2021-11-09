@@ -53,7 +53,7 @@ struct GalleryView: View {
                             }
                     }
                 }
-                .animation(.easeIn)
+                .animation(.easeIn, value: gridLayout.count)
                 .onAppear {
                     gridSwitch()
                 }
