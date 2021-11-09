@@ -12,7 +12,10 @@ struct AnimalGridItemView: View {
     let animal: Animal
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image(animal.image)
+            .resizable()
+            .scaledToFit()
+            .cornerRadius(12)
     }
 }
 

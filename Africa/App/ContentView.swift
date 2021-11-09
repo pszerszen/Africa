@@ -11,6 +11,7 @@ struct ContentView: View {
 
     private let animals = DataHelper.main.animals
     private let haptics = UIImpactFeedbackGenerator(style: .medium)
+    private let gridLayout = Array.init(repeating: GridItem(.flexible()), count: 2)
 
     @State private var isGridViewActive = false
 
@@ -33,7 +34,19 @@ struct ContentView: View {
                         }
                     }
                 } else {
-                    Text("grid view active")
+                    ScrollView(.vertical, showsIndicators: false) {
+                        LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10) {
+                            ForEach(animals) { animal in
+                                NavigationLink {
+                                    AnimalDetailView(animal: animal)
+                                } label: {
+                                    AnimalGridItemView(animal: animal)
+                                }
+                            }
+                        }
+                        .padding(10)
+                        .animation(.easeIn, value: gridLayout.count)
+                    }
                 }
             }
             .navigationBarTitle("Africa", displayMode: .large)
